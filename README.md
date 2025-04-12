@@ -1,7 +1,7 @@
 # ⚠️ 필수 설정 안내
 
 이 프로젝트를 실행하기 위해서는 OpenAI API 키가 필요합니다.
-`.env` 또는 `application.properties` 파일에 다음과 같이 설정해 주세요:
+`application.properties` 파일에 다음과 같이 설정해 주세요:
 
 ```properties
 openai.api.key=YOUR_OPENAI_API_KEY
