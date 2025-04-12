@@ -94,6 +94,7 @@ OpenAI API 연동, 사용자 관리, 피드백, 관리자 통계 및 CSV 보고�
 - THREADS
 - FEEDBACKS
 - LOGIN_LOGS
+- 💡 모든 테이블의 ID는 1부터 시작합니다.
 
 ---
 
