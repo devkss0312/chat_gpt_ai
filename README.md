@@ -1,7 +1,7 @@
 # ⚠️ 필수 설정 안내
 
 이 프로젝트를 실행하기 위해서는 OpenAI API 키가 필요합니다.
-`application.properties` 파일에 다음과 같이 설정해 주세요:
+`.env` 또는 `application.properties` 파일에 다음과 같이 설정해 주세요:
 
 ```properties
 openai.api.key=YOUR_OPENAI_API_KEY
@@ -56,29 +56,53 @@ OpenAI API 연동, 사용자 관리, 피드백, 관리자 통계 및 CSV 보고�
 
 ## 📘 주요 API 목록
 
-### 🔐 인증
-- `POST /api/auth/signup`: 회원가입
-- `POST /api/auth/login`: 로그인 → JWT 토큰 발급
+## 🔐 **인증**
+### - `POST /api/auth/signup`: 회원가입
 
-![img.png](img.png)
-- 여기서 Token 값을 복사합니다.
+  ![img_13.png](img_13.png)
+### - `POST /api/auth/login`: 로그인 → JWT 토큰 발급
 
-![img_1.png](img_1.png)
-- 오른쪽 상단의 Authorize를 클릭하여 해당 토큰 값을 입력하고 Authorize를 클릭합니다. 정확한 토큰 값이 입력되지 않으면 테스트가 불가능합니다.
+  ![img_6.png](img_6.png)
 
-### 💬 대화
-- `POST /api/chat`: 질문 전송 및 응답 저장
-- `GET /api/threads`: 자신의 스레드 목록 조회
-- `DELETE /api/threads/{id}`: 스레드 삭제
+  ![img.png](img.png)
+### 여기서 Token 값을 복사합니다.
 
-### 📝 피드백
-- `POST /api/feedback`: 피드백 생성 (중복 시 덮어쓰기)
-- `GET /api/feedback`: 피드백 목록 조회 (자신 또는 관리자)
-- `PATCH /api/feedback/{id}?status=RESOLVED`: 피드백 상태 변경 (관리자만)
+  ![img_1.png](img_1.png)
+### 오른쪽 상단의 Authorize를 클릭하여 해당 토큰 값을 입력하고 Authorize를 클릭합니다.
+### 정확한 토큰 값이 입력되지 않으면 테스트가 불가능합니다.
 
-### ⚙ 관리자 기능
-- `GET /api/admin/stats`: 최근 하루 회원가입/로그인/대화 수
-- `GET /api/admin/report`: 최근 하루 대화 CSV 파일 다운로드
+## 💬 **대화**
+### - `POST /api/chat`: 질문 전송 및 응답 저장
+
+  ![img_2.png](img_2.png)
+  ![img_3.png](img_3.png)
+### - `GET /api/threads`: 자신의 스레드 목록 조회
+
+  ![img_4.png](img_4.png)
+### - `DELETE /api/threads/{id}`: 스레드 삭제
+
+  ![img_5.png](img_5.png)
+
+## 📝 **피드백**
+### - `POST /api/feedback`: 피드백 생성 (중복 시 덮어쓰기)
+
+  ![img_7.png](img_7.png)
+### - `GET /api/feedback`: 피드백 목록 조회 (자신 또는 관리자)
+
+  ![img_8.png](img_8.png)
+### - `PATCH /api/feedback/{id}?status=RESOLVED`: 피드백 상태 변경 (관리자만)
+
+  ![img_9.png](img_9.png)
+
+## ⚙ **관리자 기능**
+### - `GET /api/admin/stats`: 최근 하루 회원가입/로그인/대화 수
+
+  ![img_10.png](img_10.png)
+### - `GET /api/admin/report`: 최근 하루 대화 CSV 파일 다운로드
+
+  ![img_12.png](img_12.png)
+
+  ![img_11.png](img_11.png)
 
 ---
 
